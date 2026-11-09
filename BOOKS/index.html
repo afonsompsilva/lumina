@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumina Library</title>
+    <link rel="icon" type="image/svg+xml" href="img/pena.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <div class="fixed-glow glow-2"></div>
+
+    <header class="header">
+        <div class="header-inner">
+          
+            <div class="logo-area">
+                <div class="logo-wrapper">
+                    <div class="logo-icon-box">
+                        <i data-lucide="feather" class="icon-sm"></i>
+                    </div>
+                    <div>
+                        <h1 class="logo-title">
+                            Lumina<span class="badge">Library</span>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-controls-area">
+                <div class="desktop-nav-group hidden-md">
+                    <button class="desktop-nav-btn active" data-tab="bookshelf">
+                        <i data-lucide="grid" class="icon-xs"></i>
+                        Estante Editorial
+                    </button>
+                    <button class="desktop-nav-btn" data-tab="vault">
+                        <i data-lucide="quote" class="icon-xs"></i>
+                        Cofre de Citações
+                    </button>
+                    <button class="desktop-nav-btn" data-tab="stats">
+                        <i data-lucide="bar-chart-3" class="icon-xs"></i>
+                        Jornada & Métricas
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-inner">
+            <div class="hero-text-block">
+                <h2 class="hero-title">
+                    Transformar leitura em <span class="gradient-text">ação diária.</span>
+                </h2>
+                <p class="hero-desc">
+                    Princípios aplicados no dia a dia.
+                    <br>
+                    Refletir é a arte de ausentar-se do supérfluo.
+                </p>
+            </div>
+
+            <div class="hero-quote-card" id="hero-quote-card">
+                <div class="quote-bg-icon">
+                    <i data-lucide="quote"></i>
+                </div>
+                <div class="hero-quote-inner">
+                    <p class="hero-quote-text" id="hero-quote-text">
+                        "O amor verdadeiro começa onde não se espera nada em troca."
+                    </p>
+                    <div class="hero-quote-footer" id="hero-quote-author">
+                        — <span class="text-light font-medium">Nicholas Sparks</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="main-container">
+        
+        <div class="controls-bar" id="controls-bar">
+            <div class="category-pills" id="category-pills">
+                <button class="cat-pill active" data-category="All">All</button>
+                <button class="cat-pill" data-category="Romance">Romance</button>
+                <button class="cat-pill" data-category="Desenvolvimento Pessoal">Desenvolvimento Pessoal</button>
+                <button class="cat-pill" data-category="Poesia">Poesia</button>
+            </div>
+
+            <div class="search-wrapper">
+                <i data-lucide="search" class="search-icon"></i>
+                <input type="text" id="search-input" placeholder="Pesquisar livro ou autor..." class="search-input">
+                <button id="clear-search-btn" class="clear-search-btn hidden">
+                    <i data-lucide="x" class="icon-xs"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="view-bookshelf" class="view-section active">
+            <div class="books-grid" id="books-grid"></div>
+        </div>
+
+        <div id="view-vault" class="view-section">
+            <div class="quotes-grid" id="quotes-grid"></div>
+        </div>
+
+        <div id="view-stats" class="view-section">
+            <div class="stats-container">
+                <br>
+                <br>
+                <div class="stats-top-grid">
+                    <div class="stat-card">
+                        <div class="stat-card-header">
+                            <div class="stat-icon-box stat-icon-amber">
+                                <i data-lucide="book-marked" class="icon-xs"></i>
+                            </div>
+                            <span>Livros Lidos</span>
+                        </div>
+                        <div class="stat-value" id="stat-books-count">12</div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-card-header">
+                            <div class="stat-icon-box stat-icon-emerald">
+                                <i data-lucide="layers" class="icon-xs"></i>
+                            </div>
+                            <span>Total de Páginas</span>
+                        </div>
+                        <div class="stat-value" id="stat-pages-count">3 416</div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-card-header">
+                            <div class="stat-icon-box stat-icon-purple">
+                                <i data-lucide="award" class="icon-xs"></i>
+                            </div>
+                            <span>Avaliação Média</span>
+                        </div>
+                        <div class="stat-value">5.0 <span class="stat-sub-unit">/ 5.0</span></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- DETAILED BOOK INSPECTION MODAL / DRAWER -->
+    <div class="modal-backdrop" id="book-modal">
+        <div class="modal-box" id="modal-box-content">
+            <button class="modal-close-btn" id="modal-close-btn">
+                <i data-lucide="x" class="icon-xs"></i>
+            </button>
+            <div class="modal-header" id="modal-header"></div>
+            <div class="modal-tabs" id="modal-tabs">
+                <button class="modal-tab-btn active" data-tab="overview">Resumo Executivo</button>
+                <button class="modal-tab-btn" data-tab="highlights" id="modal-tab-highlights-btn">Highlights & Citações</button>
+                <button class="modal-tab-btn" data-tab="frameworks">Lições & Prática</button>
+                <button class="modal-tab-btn" data-tab="specs">Ficha Técnica</button>
+            </div>
+            <div class="modal-body" id="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- FULLSCREEN QUOTE DISPLAY MODAL -->
+    <div class="modal-backdrop" id="fullscreen-quote-modal">
+        <div class="fs-modal-box">
+            <button class="modal-close-btn" id="fs-close-btn">
+                <i data-lucide="x" class="icon-xs"></i>
+            </button>
+
+            <div class="fs-badge">
+                <i data-lucide="sparkles" class="icon-xs"></i>
+            </div>
+
+            <p class="fs-quote-text" id="fs-quote-text">""</p>
+
+            <div class="fs-quote-author" id="fs-quote-meta">
+                — <span class="text-accent font-semibold" id="fs-author"></span>, <span id="fs-book"></span>
+            </div>
+
+            <div class="fs-actions">
+                <button class="fs-btn fs-btn-secondary" id="fs-copy-btn">
+                    <i data-lucide="copy" class="icon-xs"></i> Copiar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>Lumina Library • Afonso Martins Pimentel Silva
+            <br>
+        <br>
+        <a href="https://www.instagram.com/afonsompsilva/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-link">Instagram</a> |
+        <a href="https://linktr.ee/afonsompsilva" target="_blank" rel="noopener noreferrer" aria-label="Linktree" class="social-link">Linktree</a> |
+        <a href="https://pinterest.com/afonsompsilvaa" target="_blank" rel="noopener noreferrer" aria-label="Pinterest" class="social-link">Pinterest</a> |
+        <a href="https://tiktok.com/@afonsompsilva" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="social-link">TikTok</a>
+        </p>
+        
+</footer>
+
+    <!-- SCRIPT -->
+    <script src="book.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
