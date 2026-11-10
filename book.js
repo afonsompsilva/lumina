@@ -1,3 +1,7 @@
+// ==========================================================================
+// LUMINA LIBRARY JAVASCRIPT LOGIC - COMPLETE APPLICATION
+// ==========================================================================
+
 const INITIAL_BOOKS = [
   {
     id: '1',
@@ -166,7 +170,7 @@ const INITIAL_BOOKS = [
     personalReview: 'Um livro direto e pragmático. A análise detalhada sobre a comunicação não-verbal e a PNL aplicada oferece ferramentas imediatamente utilizáveis para reuniões profissionais e contextos sociais. Excelente para aperfeiçoar a presença, a assertividade e a clareza interpessoal.',
     authorBio: 'Nicholas Boothman é um especialista internacional em comunicação, PNL e dinâmica social. Ex-fotógrafo de moda internacional, dedicou anos a estudar o impacto da linguagem corporal na liderança e nas vendas.',
     quotes: [
-      { text: "Quando ligas o teu coração aos teus olhos e à tua voz, a magia da conexão interpessoalcontece.", page: 34 },
+      { text: "Quando ligas o teu coração aos teus olhos e à tua voz, a magia da conexão interpessoal acontece.", page: 34 },
       { text: "A chave para a persuasão não é o que dizes, mas a confiança e segurança que inspiras ao falar.", page: 88 },
       { text: "O segredo para cativar está em fazer o outro sentir-se verdadeiramente ouvido e importante.", page: 132 },
       { text: "A sincronia física precede e estabelece a sintonia emocional.", page: 194 },
@@ -375,7 +379,7 @@ const INITIAL_BOOKS = [
     rating: 5,
     cover: 'img/ganhei uma vida.png', 
     favoriteChapter: 'Capítulo 16 - A Reconstrução do Eu',
-    executiveSummary: 'Um romance sobre superação afetiva, aut redescoberta e reconstrução pessoal após o término de um relacionamento. Raul Minh\'alma explora a dinâmica do desapego, demonstrando como o fim de uma etapa amorosa pode ser o catalisador para recuperar a dignidade, a independência e a clareza sobre os objetivos individuais. A obra aborda a importância de atravessar o luto emocional com serenidade, transformando a perda na oportunidade de erguer uma vida mais autêntica.',
+    executiveSummary: 'Um romance sobre superação afetiva, redescoberta e reconstrução pessoal após o término de um relacionamento. Raul Minh\'alma explora a dinâmica do desapego, demonstrando como o fim de uma etapa amorosa pode ser o catalisador para recuperar a dignidade, a independência e a clareza sobre os objetivos individuais. A obra aborda a importância de atravessar o luto emocional com serenidade, transformando a perda na oportunidade de erguer uma vida mais autêntica.',
     coreConcepts: [
       { title: 'Cura e Processamento Emocional', desc: 'Compreender que a superação exige aceitar a dor da transição sem recorrer a atalhos ou negações.' },
       { title: 'Redescoberta da Autonomia', desc: 'Reconstruir a identidade individual fora do espaço de casal, valorizando a própria companhia e projetos pessoais.' },
@@ -398,7 +402,7 @@ const INITIAL_BOOKS = [
       { text: "A tua felicidade futura não pode ficar refém de quem escolheu voluntariamente partir do teu presente.", page: 240 },
       { text: "Descobri que a minha solidão era muito mais bonita e serena do que uma companhia vazia e incerta.", page: 260 },
       { text: "Não peças amor a quem nem sequer sabe cuidar de si próprio.", page: 95 },
-      { text: "Recuperar o controlo da tua vida é o maior ato de amor-próprio que podes praticar.", page: 142 },
+      { text: "Recuperar o controlo da tua vida é o maior ato de amor-próprio que podes practicar.", page: 142 },
       { text: "Há partidas que chegam como tempestades, mas deixam o céu perfeitamente limpo para o teu renascimento.", page: 215 },
       { text: "Perdoar o passado é a chave para não carregar correntes no presente.", page: 110 },
       { text: "A tua dignidade vale mais do que qualquer promessa não cumprida.", page: 168 },
@@ -471,7 +475,7 @@ const INITIAL_BOOKS = [
       { title: 'Valorização das Cicatrizes', desc: 'Encarar as marcas do passado como testemunhos de superação e aprendizagem contínua.' },
       { title: 'O Poder do Perdão', desc: 'Libertar ressentimentos passados para permitir uma caminhada mais leve no presente.' },
       { title: 'Superação do Papel de Vítima', desc: 'Assumir uma postura ativa de reconstrução em vez de alimentar a passividade perante a dor.' },
-      { title: 'Descberta da Força Interior', desc: 'Reconhecer recursos emocionais pessoais até então desconhecidos diante de crises profundas.' },
+      { title: 'Descoberta da Força Interior', desc: 'Reconhecer recursos emocionais pessoais até então desconhecidos diante de crises profundas.' },
       { title: 'Gratidão pelo Presente', desc: 'Aprender a valorizar as conquistas diárias após ultrapassar momentos críticos.' }
     ],
     keyTakeaways: [
@@ -492,7 +496,7 @@ const INITIAL_BOOKS = [
       { text: "A tua força real revela-se quando o mundo pensa que estás derrotado.", page: 220 },
       { text: "Voar alto exige primeiro a coragem de desatarrachar as âncoras do passado.", page: 95 },
       { text: "A tempestade serve para nos mostrar a firmeza das nossas raízes.", page: 160 },
-      { text: "Erguer de uma queda é o ato mais corajoso que podes praticar por ti próprio.", page: 235 }
+      { text: "Erguer de uma queda é o ato mais corajoso que podes practicar por ti próprio.", page: 235 }
     ],
     frameworks: [
       { name: "Registo de Aprendizagem de Crise", desc: "Exercício de identificação dos recursos internos utilizados para ultrapassar momentos difíceis no passado." },
@@ -545,8 +549,6 @@ const INITIAL_BOOKS = [
     ]
   }
 ];
-  }
-];
 
 // STATE VARIABLES
 let activeTab = 'bookshelf'; // 'bookshelf' | 'vault' | 'stats'
@@ -554,7 +556,6 @@ let selectedCategory = 'All';
 let searchQuery = '';
 let selectedBook = null;
 let bookModalTab = 'overview';
-let fullscreenQuote = null;
 let copiedKey = null;
 
 // ALL QUOTES FLATTENED
@@ -593,17 +594,18 @@ function setupNavigation() {
     activeTab = tabName;
     
     desktopBtns.forEach(btn => {
-      if(btn.dataset.tab === tabName) btn.classList.add('active');
+      if (btn.dataset.tab === tabName) btn.classList.add('active');
       else btn.classList.remove('active');
     });
 
     mobileBtns.forEach(btn => {
-      if(btn.dataset.tab === tabName) btn.classList.add('active');
+      if (btn.dataset.tab === tabName) btn.classList.add('active');
       else btn.classList.remove('active');
     });
 
     document.querySelectorAll('.view-section').forEach(sec => sec.classList.remove('active'));
-    document.getElementById(`view-${tabName}`).classList.add('active');
+    const targetSection = document.getElementById(`view-${tabName}`);
+    if (targetSection) targetSection.classList.add('active');
 
     const controlsBar = document.getElementById('controls-bar');
     if (controlsBar) {
@@ -621,9 +623,13 @@ function setupNavigation() {
 
 // HERO QUOTE & RANDOMIZER
 function renderHeroQuote() {
+  if (!allQuotes.length) return;
   const randomQ = allQuotes[Math.floor(Math.random() * allQuotes.length)];
-  document.getElementById('hero-quote-text').textContent = `"${randomQ.quote}"`;
-  document.getElementById('hero-quote-author').innerHTML = `— <span class="text-light font-medium">${randomQ.author}</span>, ${randomQ.bookTitle}`;
+  const heroText = document.getElementById('hero-quote-text');
+  const heroAuthor = document.getElementById('hero-quote-author');
+  
+  if (heroText) heroText.textContent = `"${randomQ.quote}"`;
+  if (heroAuthor) heroAuthor.innerHTML = `— <span class="text-light font-medium">${randomQ.author}</span>, ${randomQ.bookTitle}`;
 }
 
 // FILTERS & SEARCH SETUP
@@ -642,27 +648,33 @@ function setupFiltersAndSearch() {
     });
   });
 
-  searchInput.addEventListener('input', (e) => {
-    searchQuery = e.target.value;
-    if (searchQuery) clearSearchBtn.classList.remove('hidden');
-    else clearSearchBtn.classList.add('hidden');
-    
-    renderBookshelf();
-    renderVault();
-  });
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      searchQuery = e.target.value;
+      if (clearSearchBtn) {
+        if (searchQuery) clearSearchBtn.classList.remove('hidden');
+        else clearSearchBtn.classList.add('hidden');
+      }
+      renderBookshelf();
+      renderVault();
+    });
+  }
 
-  clearSearchBtn.addEventListener('click', () => {
-    searchInput.value = '';
-    searchQuery = '';
-    clearSearchBtn.classList.add('hidden');
-    renderBookshelf();
-    renderVault();
-  });
+  if (clearSearchBtn) {
+    clearSearchBtn.addEventListener('click', () => {
+      if (searchInput) searchInput.value = '';
+      searchQuery = '';
+      clearSearchBtn.classList.add('hidden');
+      renderBookshelf();
+      renderVault();
+    });
+  }
 }
 
 // RENDER BOOKSHELF
 function renderBookshelf() {
   const grid = document.getElementById('books-grid');
+  if (!grid) return;
   
   const filtered = INITIAL_BOOKS.filter(book => {
     const matchesCat = selectedCategory === 'All' || book.category.toLowerCase() === selectedCategory.toLowerCase();
@@ -711,6 +723,7 @@ function renderBookshelf() {
 // RENDER VAULT (QUOTES)
 function renderVault() {
   const grid = document.getElementById('quotes-grid');
+  if (!grid) return;
 
   const filtered = allQuotes.filter(q => {
     const matchesCat = selectedCategory === 'All' || q.category.toLowerCase() === selectedCategory.toLowerCase();
@@ -742,9 +755,6 @@ function renderVault() {
           <span class="text-muted font-serif" style="font-style:italic;">${q.bookTitle} (pág. ${q.page})</span>
         </div>
         <div class="vault-quote-actions">
-          <button class="vault-action-btn" onclick="openFullscreenQuoteById('${q.id}')" title="Ecrã Inteiro">
-            <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
-          </button>
           <button class="vault-action-btn" onclick="copyTextToClipboard('${q.quote.replace(/'/g, "\\'")}', 'vault-${idx}')" title="Copiar Frase">
             ${copiedKey === `vault-${idx}` ? '<svg viewBox="0 0 24 24" width="14" height="14" stroke="#34d399" stroke-width="2" fill="none"><polyline points="20 6 9 17 4 12"></polyline></svg>' : '<svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>'}
           </button>
@@ -758,11 +768,41 @@ function renderVault() {
 function renderStats() {
   const totalPages = INITIAL_BOOKS.reduce((acc, b) => acc + b.pages, 0);
 
-  document.getElementById('stat-books-count').textContent = INITIAL_BOOKS.length;
-  document.getElementById('stat-pages-count').textContent = totalPages.toLocaleString();
+  const booksCountElem = document.getElementById('stat-books-count');
+  const pagesCountElem = document.getElementById('stat-pages-count');
+
+  if (booksCountElem) booksCountElem.textContent = INITIAL_BOOKS.length;
+  if (pagesCountElem) pagesCountElem.textContent = totalPages.toLocaleString();
 }
 
 // MODAL CONTROLS & INSPECTION
+function setupModals() {
+  const closeModalBtn = document.getElementById('modal-close-btn');
+  const modalOverlay = document.getElementById('book-modal');
+  const tabBtns = document.querySelectorAll('.modal-tab-btn');
+
+  if (closeModalBtn) {
+    closeModalBtn.addEventListener('click', () => {
+      if (modalOverlay) modalOverlay.classList.remove('active');
+    });
+  }
+
+  if (modalOverlay) {
+    modalOverlay.addEventListener('click', (e) => {
+      if (e.target === modalOverlay) modalOverlay.classList.remove('active');
+    });
+  }
+
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      tabBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      bookModalTab = btn.dataset.tab;
+      renderModalBody();
+    });
+  });
+}
+
 function openBookModal(bookId) {
   selectedBook = INITIAL_BOOKS.find(b => b.id === bookId);
   if (!selectedBook) return;
@@ -770,45 +810,54 @@ function openBookModal(bookId) {
   bookModalTab = 'overview';
   
   const header = document.getElementById('modal-header');
-  header.innerHTML = `
-    <img src="${selectedBook.cover}" alt="${selectedBook.title}" class="modal-book-cover">
-    <div class="modal-book-info">
-      <div>
-        <span class="modal-tag">${selectedBook.category}</span>
-        <span class="text-dim" style="font-size: 11px; margin-left: 8px;">• Concluído a ${selectedBook.completionDate}</span>
+  if (header) {
+    header.innerHTML = `
+      <img src="${selectedBook.cover}" alt="${selectedBook.title}" class="modal-book-cover">
+      <div class="modal-book-info">
+        <div>
+          <span class="modal-tag">${selectedBook.category}</span>
+          <span class="text-dim" style="font-size: 11px; margin-left: 8px;">• Lido em ${selectedBook.yearRead}</span>
+        </div>
+        <h2 class="modal-title">${selectedBook.title}</h2>
+        <p class="modal-author">Autor: <span class="text-light font-medium">${selectedBook.author}</span></p>
+        <div class="modal-rating-row">
+          ${[...Array(5)].map((_, i) => `
+            <svg class="star-icon" viewBox="0 0 24 24" style="width:14px;height:14px;fill:${i < selectedBook.rating ? 'var(--primary)' : '#334155'};color:${i < selectedBook.rating ? 'var(--primary)' : '#334155'}"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          `).join('')}
+          <span class="text-light font-semibold" style="font-size: 12px; margin-left: 4px;">(${selectedBook.rating}.0 / 5.0)</span>
+        </div>
       </div>
-      <h2 class="modal-title">${selectedBook.title}</h2>
-      <p class="modal-author">Autor: <span class="text-light font-medium">${selectedBook.author}</span></p>
-      <div class="modal-rating-row">
-        ${[...Array(5)].map((_, i) => `
-          <svg class="star-icon" viewBox="0 0 24 24" style="width:14px;height:14px;fill:${i < selectedBook.rating ? 'var(--primary)' : '#334155'};color:${i < selectedBook.rating ? 'var(--primary)' : '#334155'}"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        `).join('')}
-        <span class="text-light font-semibold" style="font-size: 12px; margin-left: 4px;">(${selectedBook.rating}.0 / 5.0)</span>
-      </div>
-    </div>
-  `;
+    `;
+  }
 
   document.querySelectorAll('.modal-tab-btn').forEach(btn => {
-    if(btn.dataset.tab === 'overview') btn.classList.add('active');
+    if (btn.dataset.tab === 'overview') btn.classList.add('active');
     else btn.classList.remove('active');
   });
-  document.getElementById('modal-tab-highlights-btn').textContent = `Highlights & Citações (${selectedBook.quotes.length})`;
+
+  const highlightsBtn = document.getElementById('modal-tab-highlights-btn');
+  if (highlightsBtn) {
+    highlightsBtn.textContent = `Citações (${selectedBook.quotes.length})`;
+  }
 
   renderModalBody();
-  document.getElementById('book-modal').classList.add('active');
+  const modal = document.getElementById('book-modal');
+  if (modal) modal.classList.add('active');
 }
 
 function renderModalBody() {
   const body = document.getElementById('modal-body');
+  if (!body || !selectedBook) return;
 
   if (bookModalTab === 'overview') {
     body.innerHTML = `
       <div style="margin-bottom: 24px;">
-        <h4 class="modal-section-title">Premissa Principal</h4>
+        <h4 class="modal-section-title">Resumo Executivo</h4>
         <div class="modal-box-text">${selectedBook.executiveSummary}</div>
       </div>
-      <div>
-        <h4 class="modal-section-title">Conceitos Chave</h4>
+      
+      <div style="margin-bottom: 24px;">
+        <h4 class="modal-section-title">Conceitos-Chave</h4>
         <div class="concepts-grid">
           ${selectedBook.coreConcepts.map(c => `
             <div class="concept-card">
@@ -818,13 +867,32 @@ function renderModalBody() {
           `).join('')}
         </div>
       </div>
+
+      <div style="margin-bottom: 24px;">
+        <h4 class="modal-section-title">Principais Aprendizagens</h4>
+        <ul style="list-style: disc; padding-left: 20px; color: #cbd5e1; font-size: 13px; line-height: 1.8;">
+          ${selectedBook.keyTakeaways.map(t => `<li>${t}</li>`).join('')}
+        </ul>
+      </div>
+
+      <div style="margin-bottom: 24px;">
+        <h4 class="modal-section-title">Apreciação Pessoal</h4>
+        <div class="modal-box-text" style="font-style: italic; border-left: 3px solid var(--primary); padding-left: 12px;">
+          "${selectedBook.personalReview}"
+        </div>
+      </div>
+
+      <div>
+        <h4 class="modal-section-title">Sobre o Autor</h4>
+        <p style="color: #94a3b8; font-size: 13px; line-height: 1.6;">${selectedBook.authorBio}</p>
+      </div>
     `;
   } else if (bookModalTab === 'highlights') {
     body.innerHTML = `
-      <h4 class="modal-section-title" style="margin-bottom: 16px;">Citações e Excertos Selecionados</h4>
+      <h4 class="modal-section-title" style="margin-bottom: 16px;">Citações & Excertos Relevantes</h4>
       <div>
         ${selectedBook.quotes.map((q, idx) => `
-          <div class="modal-highlight-item">
+          <div class="modal-highlight-item" style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px; padding: 12px; background: rgba(30,41,59,0.5); border-radius: 8px;">
             <div style="display: flex; gap: 14px; align-items: flex-start;">
               <svg style="width: 18px; height: 18px; color: var(--primary); flex-shrink: 0; margin-top: 2px;" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
               <div>
@@ -841,102 +909,31 @@ function renderModalBody() {
     `;
   } else if (bookModalTab === 'frameworks') {
     body.innerHTML = `
-      <div style="margin-bottom: 24px;">
-        <h4 class="modal-section-title">Lições Práticas Extraídas</h4>
-        <div>
-          ${selectedBook.keyTakeaways.map(t => `
-            <div class="modal-takeaway-item">
-              <svg style="width: 16px; height: 16px; color: var(--primary); flex-shrink: 0; margin-top: 2px;" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <p style="font-size: 12px; color: #cbd5e1; line-height: 1.6;">${t}</p>
-            </div>
-          `).join('')}
-        </div>
-      </div>
-      <div>
-        <h4 class="modal-section-title">A Minha Opinião Pessoal</h4>
-        <div class="modal-box-text">${selectedBook.personalReview}</div>
-      </div>
-    `;
-  } else if (bookModalTab === 'specs') {
-    body.innerHTML = `
-      <div style="display: grid; grid-template-columns: repeat(1, 1fr); gap: 16px;">
-        <div class="concept-card">
-          <span class="text-dim" style="font-size: 11px;">Capítulo Favorito</span>
-          <p class="text-accent font-semibold" style="font-size: 13px;">${selectedBook.favoriteChapter}</p>
-        </div>
-        <div class="concept-card">
-          <span class="text-dim" style="font-size: 11px;">Formato da Obra</span>
-          <p class="text-light font-semibold" style="font-size: 13px;">${selectedBook.format}</p>
-        </div>
-        <div class="concept-card">
-          <span class="text-dim" style="font-size: 11px;">Extensão</span>
-          <p class="text-light font-semibold" style="font-size: 13px;">${selectedBook.pages} páginas</p>
-        </div>
-        <div class="concept-card">
-          <span class="text-dim" style="font-size: 11px;">Sobre o Autor</span>
-          <p class="text-muted" style="font-size: 12px; line-height: 1.6; margin-top: 2px;">${selectedBook.authorBio}</p>
-        </div>
+      <h4 class="modal-section-title" style="margin-bottom: 16px;">Frameworks & Aplicação Prática</h4>
+      <div class="concepts-grid">
+        ${selectedBook.frameworks ? selectedBook.frameworks.map(f => `
+          <div class="concept-card">
+            <span class="concept-title">${f.name}</span>
+            <p class="concept-desc">${f.desc}</p>
+          </div>
+        `).join('') : '<p class="text-muted">Sem frameworks registadas para este livro.</p>'}
       </div>
     `;
   }
 }
 
-// SETUP MODALS EVENT LISTENERS
-function setupModals() {
-  document.querySelectorAll('.modal-tab-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.modal-tab-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      bookModalTab = btn.dataset.tab;
-      renderModalBody();
-    });
-  });
-
-  const bookModal = document.getElementById('book-modal');
-  document.getElementById('modal-close-btn').addEventListener('click', () => bookModal.classList.remove('active'));
-  bookModal.addEventListener('click', (e) => {
-    if (e.target === bookModal) bookModal.classList.remove('active');
-  });
-
-  const fsModal = document.getElementById('fullscreen-quote-modal');
-  document.getElementById('fs-close-btn').addEventListener('click', () => fsModal.classList.remove('active'));
-  fsModal.addEventListener('click', (e) => {
-    if (e.target === fsModal) fsModal.classList.remove('active');
-  });
-
-  document.getElementById('fs-copy-btn').addEventListener('click', () => {
-    if (fullscreenQuote) {
-      copyTextToClipboard(fullscreenQuote.quote, 'fs');
-    }
-  });
-}
-
-function openFullscreenQuoteById(qId) {
-  const q = allQuotes.find(item => item.id === qId);
-  if (!q) return;
-  fullscreenQuote = q;
-
-  document.getElementById('fs-quote-text').textContent = `"${q.quote}"`;
-  document.getElementById('fs-author').textContent = q.author;
-  document.getElementById('fs-book').textContent = q.bookTitle;
-  
-  document.getElementById('fullscreen-quote-modal').classList.add('active');
-}
-
-// CLIPBOARD HELPER
+// UTILITY: COPY TO CLIPBOARD
 function copyTextToClipboard(text, key) {
   navigator.clipboard.writeText(text).then(() => {
     copiedKey = key;
-    if (activeTab === 'bookshelf' || activeTab === 'vault') {
-      renderVault();
-      if (selectedBook) renderModalBody();
-    }
+    renderVault();
+    renderModalBody();
     setTimeout(() => {
       copiedKey = null;
-      if (activeTab === 'bookshelf' || activeTab === 'vault') {
-        renderVault();
-        if (selectedBook) renderModalBody();
-      }
+      renderVault();
+      renderModalBody();
     }, 2000);
+  }).catch(err => {
+    console.error('Erro ao copiar texto: ', err);
   });
 }
