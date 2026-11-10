@@ -1,209 +1,154 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lumina Library</title>
-    <link rel="icon" type="image/svg+xml" href="img/pena.png">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lumina Library — Acervo Literário & Reflexões</title>
+  
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Estilos -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <div class="fixed-glow glow-2"></div>
-
-    <header class="header">
-        <div class="header-inner">
-          
-            <div class="logo-area">
-                <div class="logo-wrapper">
-                    <div class="logo-icon-box">
-                        <i data-lucide="feather" class="icon-sm"></i>
-                    </div>
-                    <div>
-                        <h1 class="logo-title">
-                            Lumina<span class="badge">Library</span>
-                        </h1>
-                    </div>
-                </div>
-            </div>
-
-            <div class="nav-controls-area">
-                <div class="desktop-nav-group hidden-md">
-                    <button class="desktop-nav-btn active" data-tab="bookshelf">
-                        <i data-lucide="grid" class="icon-xs"></i>
-                        Estante Editorial
-                    </button>
-                    <button class="desktop-nav-btn" data-tab="vault">
-                        <i data-lucide="quote" class="icon-xs"></i>
-                        Cofre de Citações
-                    </button>
-                    <button class="desktop-nav-btn" data-tab="stats">
-                        <i data-lucide="bar-chart-3" class="icon-xs"></i>
-                        Jornada & Métricas
-                    </button>
-                </div>
-            </div>
-
+  <!-- HEADER -->
+  <header>
+    <div class="container header-inner">
+      <a href="#" class="brand">
+        <div class="brand-logo-wrap">
+          <img src="img/lumina.png" alt="Lumina Logo" class="brand-logo-img" onerror="this.src='https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=100&q=80'">
         </div>
-    </header>
-
-    <section class="hero-section">
-        <div class="hero-inner">
-            <div class="hero-text-block">
-                <h2 class="hero-title">
-                    Transformar leitura em <span class="gradient-text">ação diária.</span>
-                </h2>
-                <p class="hero-desc">
-                    Princípios aplicados no dia a dia.
-                    <br>
-                    Refletir é a arte de ausentar-se do supérfluo.
-                </p>
-            </div>
-
-            <div class="hero-quote-card" id="hero-quote-card">
-                <div class="quote-bg-icon">
-                    <i data-lucide="quote"></i>
-                </div>
-                <div class="hero-quote-inner">
-                    <p class="hero-quote-text" id="hero-quote-text">
-                        "O amor verdadeiro começa onde não se espera nada em troca."
-                    </p>
-                    <div class="hero-quote-footer" id="hero-quote-author">
-                        — <span class="text-light font-medium">Nicholas Sparks</span>
-                    </div>
-                </div>
-            </div>
+        <div>
+          <span class="brand-title">LUMINA</span>
+          <span class="brand-tagline">Library & Insights</span>
         </div>
+      </a>
+
+      <nav class="nav-tabs">
+        <button class="nav-btn desktop-nav-btn active" data-tab="bookshelf">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          Biblioteca
+        </button>
+        <button class="nav-btn desktop-nav-btn" data-tab="vault">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+          Citações
+        </button>
+        <button class="nav-btn desktop-nav-btn" data-tab="stats">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+          Métricas
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="container">
+
+    <!-- MANIFESTO & HERO -->
+    <section class="manifesto-card">
+      <span class="manifesto-badge">O Porquê do Projeto</span>
+      <h1 class="manifesto-title font-serif">Retenção Ativa & Curadoria de Conhecimento</h1>
+      <p class="manifesto-text">
+        Este acervo foi construído como um laboratório pessoal de retenção de conhecimento. Ler sem documentar é como semear sem colher. 
+        Aqui sintetizo resumos executivos, princípios-chave, citações marcantes e modelos de aplicação prática para cada obra lida, garantindo que o conhecimento se transforma em ação.
+      </p>
+
+      <div class="quote-box-hero">
+        <div class="quote-box-hero-content">
+          <p id="hero-quote-text">"Não pares quando estiveres cansado, para quando tiveres terminado."</p>
+          <span id="hero-quote-author" style="font-size: 12px; color: var(--primary); font-weight: 700; display: block; margin-top: 4px;">— David Goggins, Não Me Podem Magoar</span>
+        </div>
+        <button class="hero-refresh-btn" onclick="renderHeroQuote()">Sorteia Frase ↻</button>
+      </div>
     </section>
 
-    <main class="main-container">
-        
-        <div class="controls-bar" id="controls-bar">
-            <div class="category-pills" id="category-pills">
-                <button class="cat-pill active" data-category="All">All</button>
-                <button class="cat-pill" data-category="Romance">Romance</button>
-                <button class="cat-pill" data-category="Desenvolvimento Pessoal">Desenvolvimento Pessoal</button>
-                <button class="cat-pill" data-category="Poesia">Poesia</button>
-            </div>
+    <!-- CONTROLS BAR -->
+    <div class="controls-bar" id="controls-bar">
+      <div class="search-box">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" id="search-input" placeholder="Pesquisar por título, autor ou palavra-chave...">
+      </div>
 
-            <div class="search-wrapper">
-                <i data-lucide="search" class="search-icon"></i>
-                <input type="text" id="search-input" placeholder="Pesquisar livro ou autor..." class="search-input">
-                <button id="clear-search-btn" class="clear-search-btn hidden">
-                    <i data-lucide="x" class="icon-xs"></i>
-                </button>
-            </div>
-        </div>
-
-        <div id="view-bookshelf" class="view-section active">
-            <div class="books-grid" id="books-grid"></div>
-        </div>
-
-        <div id="view-vault" class="view-section">
-            <div class="quotes-grid" id="quotes-grid"></div>
-        </div>
-
-        <div id="view-stats" class="view-section">
-            <div class="stats-container">
-                <br>
-                <br>
-                <div class="stats-top-grid">
-                    <div class="stat-card">
-                        <div class="stat-card-header">
-                            <div class="stat-icon-box stat-icon-amber">
-                                <i data-lucide="book-marked" class="icon-xs"></i>
-                            </div>
-                            <span>Livros Lidos</span>
-                        </div>
-                        <div class="stat-value" id="stat-books-count">12</div>
-                    </div>
-
-                    <div class="stat-card">
-                        <div class="stat-card-header">
-                            <div class="stat-icon-box stat-icon-emerald">
-                                <i data-lucide="layers" class="icon-xs"></i>
-                            </div>
-                            <span>Total de Páginas</span>
-                        </div>
-                        <div class="stat-value" id="stat-pages-count">3 416</div>
-                    </div>
-
-                    <div class="stat-card">
-                        <div class="stat-card-header">
-                            <div class="stat-icon-box stat-icon-purple">
-                                <i data-lucide="award" class="icon-xs"></i>
-                            </div>
-                            <span>Avaliação Média</span>
-                        </div>
-                        <div class="stat-value">5.0 <span class="stat-sub-unit">/ 5.0</span></div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-    </main>
-
-    <!-- DETAILED BOOK INSPECTION MODAL / DRAWER -->
-    <div class="modal-backdrop" id="book-modal">
-        <div class="modal-box" id="modal-box-content">
-            <button class="modal-close-btn" id="modal-close-btn">
-                <i data-lucide="x" class="icon-xs"></i>
-            </button>
-            <div class="modal-header" id="modal-header"></div>
-            <div class="modal-tabs" id="modal-tabs">
-                <button class="modal-tab-btn active" data-tab="overview">Resumo Executivo</button>
-                <button class="modal-tab-btn" data-tab="highlights" id="modal-tab-highlights-btn">Highlights & Citações</button>
-                <button class="modal-tab-btn" data-tab="frameworks">Lições & Prática</button>
-                <button class="modal-tab-btn" data-tab="specs">Ficha Técnica</button>
-            </div>
-            <div class="modal-body" id="modal-body"></div>
-        </div>
+      <div class="filter-pills">
+        <button class="cat-pill active" data-category="All">Todos</button>
+        <button class="cat-pill" data-category="Desenvolvimento Pessoal">Desenvolvimento Pessoal</button>
+        <button class="cat-pill" data-category="Romance">Romance</button>
+      </div>
     </div>
 
-    <!-- FULLSCREEN QUOTE DISPLAY MODAL -->
-    <div class="modal-backdrop" id="fullscreen-quote-modal">
-        <div class="fs-modal-box">
-            <button class="modal-close-btn" id="fs-close-btn">
-                <i data-lucide="x" class="icon-xs"></i>
-            </button>
+    <!-- VIEW: BOOKSHELF -->
+    <section id="view-bookshelf" class="view-section active">
+      <div class="books-grid" id="books-grid"></div>
+    </section>
 
-            <div class="fs-badge">
-                <i data-lucide="sparkles" class="icon-xs"></i>
-            </div>
+    <!-- VIEW: VAULT -->
+    <section id="view-vault" class="view-section">
+      <div class="quotes-grid" id="quotes-grid"></div>
+    </section>
 
-            <p class="fs-quote-text" id="fs-quote-text">""</p>
-
-            <div class="fs-quote-author" id="fs-quote-meta">
-                — <span class="text-accent font-semibold" id="fs-author"></span>, <span id="fs-book"></span>
-            </div>
-
-            <div class="fs-actions">
-                <button class="fs-btn fs-btn-secondary" id="fs-copy-btn">
-                    <i data-lucide="copy" class="icon-xs"></i> Copiar
-                </button>
-            </div>
+    <!-- VIEW: STATS -->
+    <section id="view-stats" class="view-section">
+      <div class="stats-container">
+        <div class="stat-card">
+          <div class="stat-number" id="stat-books-count">0</div>
+          <div class="stat-label">Livros Analisados</div>
         </div>
+        <div class="stat-card">
+          <div class="stat-number" id="stat-pages-count">0</div>
+          <div class="stat-label">Páginas Assimiladas</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" id="stat-avg-rating">5.0</div>
+          <div class="stat-label">Média de Avaliação</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- MODAL DE INSPEÇÃO -->
+  <div class="modal-overlay" id="book-modal">
+    <div class="modal-container">
+      <button class="modal-close-btn" id="modal-close-btn">&times;</button>
+      
+      <div class="modal-header" id="modal-header"></div>
+
+      <div class="modal-nav-tabs">
+        <button class="modal-tab-btn active" data-tab="overview">Visão Geral</button>
+        <button class="modal-tab-btn" data-tab="highlights" id="modal-tab-highlights-btn">Citações</button>
+        <button class="modal-tab-btn" data-tab="frameworks">Prática & Frameworks</button>
+      </div>
+
+      <div class="modal-body" id="modal-body"></div>
     </div>
+  </div>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <p>Lumina Library • Afonso Martins Pimentel Silva
-            <br>
-        <br>
-        <a href="https://www.instagram.com/afonsompsilva/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-link">Instagram</a> |
-        <a href="https://linktr.ee/afonsompsilva" target="_blank" rel="noopener noreferrer" aria-label="Linktree" class="social-link">Linktree</a> |
-        <a href="https://pinterest.com/afonsompsilvaa" target="_blank" rel="noopener noreferrer" aria-label="Pinterest" class="social-link">Pinterest</a> |
-        <a href="https://tiktok.com/@afonsompsilva" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="social-link">TikTok</a>
-        </p>
-        
-</footer>
+  <!-- FOOTER COM LINKS -->
+  <footer>
+    <div class="container footer-inner">
+      <div>
+        <p style="font-size: 13px; color: var(--text-muted); font-weight: 600;">Lumina Library &copy; 2026</p>
+        <p style="font-size: 11px; color: var(--text-dim); margin-top: 2px;">Curadoria de leituras e retenção ativa de conhecimento.</p>
+      </div>
 
-    <!-- SCRIPT -->
-    <script src="book.js"></script>
-    <script>
-        lucide.createIcons();
-    </script>
+      <div class="footer-links">
+        <a href="https://liora.pt" target="_blank" class="footer-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          Liora Website
+        </a>
+        <a href="https://instagram.com/a.mpsilva" target="_blank" class="footer-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          Instagram (@a.mpsilva)
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lógica JavaScript -->
+  <script src="app.js"></script>
 </body>
 </html>
