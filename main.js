@@ -291,21 +291,76 @@ const INITIAL_BOOKS = [
     format: 'Livro Físico',
     rating: 5,
     cover: 'img/nao te fodas.png', 
-    favoriteChapter: 'Capítulo 5',
-    executiveSummary: 'Manifesto direto para destruir a autossabotagem e assumir ação implacável.',
+    favoriteChapter: 'Capítulo 5 - Não é Preciso Ter Vontade',
+    executiveSummary: 'Um manifesto direto, sem filtros e frontal contra a paralisia mental, a vitimização e a autossabotagem crónica. Gary John Bishop desconstrói o mito moderno de que precisamos de "sentir vontade", estar inspirados ou alinhar as condições perfeitas antes de agir. Com uma linguagem crua e pragmática, o autor demonstra como o diálogo interno negativo e o vício inconsciente no drama e na incerteza mantêm as pessoas presas a uma vida medíocre. Mais do que um livro de autoajuda motivacional, funciona como um choque de realidade para cortar o ruído mental, assumir total responsabilidade pelos resultados atuais e substituir desculpas emocionais por execução imediata e consistente.',
     coreConcepts: [
-      { title: 'Ação sem Motivação', desc: 'A motivação surge depois da ação.' }
+      { title: 'O Diálogo Interno como Prisão', desc: 'A narrativa constante que manténs na tua cabeça não é a realidade absoluta, mas sim um filtro condicionado pelo medo e pelo hábito que dita o limite das tuas ações.' },
+      { title: 'Vontade vs. Ação', desc: 'A vontade e a motivação são emoções voláteis e pouco fiáveis. A ação não depende de como te sentes; o sentimento positivo surge como consequência da execução, nunca como pré-requisito.' },
+      { title: 'O Vício na Incerteza e no Drama', desc: 'Muitas vezes, a estagnação não é falta de capacidade, mas um apego inconsciente à familiaridade do problema, que oferece uma desculpa segura para não arriscar falhar.' },
+      { title: 'Assertividade Radical', desc: 'Assumir sem reservas que a vida que tens hoje é o reflexo exato das tuas escolhas, tolerâncias e ações passadas, eliminando qualquer culpabilização externa.' },
+      { title: 'Desapego das Expectativas', desc: 'As expectativas rígidas geram frustração e paralisia quando a realidade não colabora; focar apenas no que está sob o teu controlo imediato liberta energia para agir.' }
     ],
     keyTakeaways: [
-      'Ninguém te está a impedir a não ser tu próprio.'
+      'Ninguém te está a impedir de avançar a não ser tu próprio e as histórias que contas a ti mesmo para justificar a inação.',
+      'Não precisas de ter vontade para fazer o que tem de ser feito; a disciplina consiste em agir independentemente do estado emocional.',
+      'Tu és o resultado do que fazes repetidamente, não daquilo que dizes que vais fazer ou do que planeias em silêncio.',
+      'Aceitar a realidade tal como ela é — sem dramas nem vitimização — é o único ponto de partida eficaz para qualquer mudança real.'
     ],
-    personalReview: 'Excelente para sacudir a apatia.',
-    authorBio: 'Coach internacional.',
+    personalReview: 'Uma leitura direta ao ponto que funciona como um abanão necessário contra a apatia e o excesso de análise. O grande mérito de Gary John Bishop é retirar todo o romantismo da "motivação" e expor a simplicidade brutal da execução: ou fazes, ou inventas uma desculpa. Sem rodeios nem teorias complexas, é um livro prático que corta pela raiz a tendência humana de complicar o que é simples e obriga a assumir o controlo imediato das próprias ações.',
+    authorBio: 'Autor bestseller do New York Times, coach de desenvolvimento pessoal de renome internacional e especialista em ontologia e transformação comportamental.',
     quotes: [
-      { text: "Ninguém te está a impedir a não ser tu próprio.", page: 31 }
+      { text: "Ninguém te está a impedir a não ser tu próprio.", page: 31 },
+      { text: "Não é preciso ter vontade. Faz o que tens de fazer, quer te apeteça quer não.", page: 89 },
+      { text: "Tu não és os teus pensamentos; tu és aquilo que fazes.", page: 114 },
+      { text: "A forma como falas contigo próprio determina a qualidade da tua vida e a dimensão dos teus resultados.", page: 47 },
+      { text: "Para de esperar pelo momento perfeito ou pela inspiração divina. O único momento que existe é agora.", page: 162 }
     ],
     frameworks: [
-      { name: "Execução Cega", desc: "Suprimir o debate mental e agir." }
+      { name: "Execução Cega", desc: "Suprimir o debate mental e o overthinking antes de uma tarefa difícil, passando diretamente do pensamento à ação física imediata." },
+      { name: "Auditoria de Assertividade", desc: "Analisar qualquer situação estagnada através de sete afirmações diretas (como 'Eu estou disposto' e 'Eu sou assertivo') para identificar onde estás a sabotar-te." },
+      { name: "Corte de Ruído Interno", desc: "Isolar os pensamentos automáticos de dúvida ou vitimização e tratá-los apenas como ruído de fundo sem autoridade sobre as tuas decisões." },
+      { name: "Foco no Controlo Imediato", desc: "Separar radicalmente o que depende da tua ação direta daquilo que são apenas expectativas sobre terceiros ou circunstâncias externas." }
+    ]
+  },
+  {
+    id: '8',
+    title: 'Não Te Fodas',
+    author: 'Gary John Bishop',
+    category: 'Desenvolvimento Pessoal',
+    yearRead: 2024,
+    pages: 208,
+    format: 'Livro Físico',
+    rating: 5,
+    cover: 'img/nao te fodas.png', 
+    favoriteChapter: 'Capítulo 5 - Não é Preciso Ter Vontade',
+    executiveSummary: 'Um manifesto direto, sem filtros e frontal contra a paralisia mental, a vitimização e a autossabotagem crónica. Gary John Bishop desconstrói o mito moderno de que precisamos de "sentir vontade", estar inspirados ou alinhar as condições perfeitas antes de agir. Com uma linguagem crua e pragmática, o autor demonstra como o diálogo interno negativo e o vício inconsciente no drama e na incerteza mantêm as pessoas presas a uma vida medíocre. Mais do que um livro de autoajuda motivacional, funciona como um choque de realidade para cortar o ruído mental, assumir total responsabilidade pelos resultados atuais e substituir desculpas emocionais por execução imediata e consistente.',
+    coreConcepts: [
+      { title: 'O Diálogo Interno como Prisão', desc: 'A narrativa constante que manténs na tua cabeça não é a realidade absoluta, mas sim um filtro condicionado pelo medo e pelo hábito que dita o limite das tuas ações.' },
+      { title: 'Vontade vs. Ação', desc: 'A vontade e a motivação são emoções voláteis e pouco fiáveis. A ação não depende de como te sentes; o sentimento positivo surge como consequência da execução, nunca como pré-requisito.' },
+      { title: 'O Vício na Incerteza e no Drama', desc: 'Muitas vezes, a estagnação não é falta de capacidade, mas um apego inconsciente à familiaridade do problema, que oferece uma desculpa segura para não arriscar falhar.' },
+      { title: 'Assertividade Radical', desc: 'Assumir sem reservas que a vida que tens hoje é o reflexo exato das tuas escolhas, tolerâncias e ações passadas, eliminando qualquer culpabilização externa.' },
+      { title: 'Desapego das Expectativas', desc: 'As expectativas rígidas geram frustração e paralisia quando a realidade não colabora; focar apenas no que está sob o teu controlo imediato liberta energia para agir.' }
+    ],
+    keyTakeaways: [
+      'Ninguém te está a impedir de avançar a não ser tu próprio e as histórias que contas a ti mesmo para justificar a inação.',
+      'Não precisas de ter vontade para fazer o que tem de ser feito; a disciplina consiste em agir independentemente do estado emocional.',
+      'Tu és o resultado do que fazes repetidamente, não daquilo que dizes que vais fazer ou do que planeias em silêncio.',
+      'Aceitar a realidade tal como ela é — sem dramas nem vitimização — é o único ponto de partida eficaz para qualquer mudança real.'
+    ],
+    personalReview: 'Uma leitura direta ao ponto que funciona como um abanão necessário contra a apatia e o excesso de análise. O grande mérito de Gary John Bishop é retirar todo o romantismo da "motivação" e expor a simplicidade brutal da execução: ou fazes, ou inventas uma desculpa. Sem rodeios nem teorias complexas, é um livro prático que corta pela raiz a tendência humana de complicar o que é simples e obriga a assumir o controlo imediato das próprias ações.',
+    authorBio: 'Autor bestseller do New York Times, coach de desenvolvimento pessoal de renome internacional e especialista em ontologia e transformação comportamental.',
+    quotes: [
+      { text: "Ninguém te está a impedir a não ser tu próprio.", page: 31 },
+      { text: "Não é preciso ter vontade. Faz o que tens de fazer, quer te apeteça quer não.", page: 89 },
+      { text: "Tu não és os teus pensamentos; tu és aquilo que fazes.", page: 114 },
+      { text: "A forma como falas contigo próprio determina a qualidade da tua vida e a dimensão dos teus resultados.", page: 47 },
+      { text: "Para de esperar pelo momento perfeito ou pela inspiração divina. O único momento que existe é agora.", page: 162 }
+    ],
+    frameworks: [
+      { name: "Execução Cega", desc: "Suprimir o debate mental e o overthinking antes de uma tarefa difícil, passando diretamente do pensamento à ação física imediata." },
+      { name: "Auditoria de Assertividade", desc: "Analisar qualquer situação estagnada através de sete afirmações diretas (como 'Eu estou disposto' e 'Eu sou assertivo') para identificar onde estás a sabotar-te." },
+      { name: "Corte de Ruído Interno", desc: "Isolar os pensamentos automáticos de dúvida ou vitimização e tratá-los apenas como ruído de fundo sem autoridade sobre as tuas decisões." },
+      { name: "Foco no Controlo Imediato", desc: "Separar radicalmente o que depende da tua ação direta daquilo que são apenas expectativas sobre terceiros ou circunstâncias externas." }
     ]
   },
   {
@@ -318,21 +373,33 @@ const INITIAL_BOOKS = [
     format: 'Livro Físico',
     rating: 5,
     cover: 'img/ganhei uma vida.png', 
-    favoriteChapter: 'Capítulo 16',
-    executiveSummary: 'Romance catártico sobre o fim de uma relação e a redescoberta pessoal.',
+    favoriteChapter: 'Capítulo 16 - O Peso do Fim e o Início de Tudo',
+    executiveSummary: 'Um romance profundamente catártico e realista sobre o fim de uma relação que parecia definitiva e o processo doloroso, mas libertador, de reconstrução pessoal. Raul Minh\'alma explora a anatomia do luto amoroso, mostrando como a perda de alguém que amamos — por mais devastadora que pareça no momento — pode ser o catalisador necessário para nos reencontrarmos, recuperarmos a nossa identidade perdida e darmos valor ao amor-próprio. A narrativa equilibra a melancolia da rutura com uma mensagem forte de empoderamento emocional, demonstrando que fechar ciclos é a única forma de abrir espaço para uma vida verdadeiramente autêntica.',
     coreConcepts: [
-      { title: 'Reencontro Consigo', desc: 'Aprender a desfrutar da própria companhia.' }
+      { title: 'Reencontro Consigo', desc: 'Aprender a desfrutar da própria companhia e a preencher os vazios emocionais com objetivos próprios, deixando de depender da validação alheia.' },
+      { title: 'A Anatomia do Fim', desc: 'Compreender que o fim de uma relação não é um fracasso absoluto, mas sim o término de um ciclo que esgotou o seu propósito evolutivo.' },
+      { title: 'Desapego da Ilusão', desc: 'A coragem de parar de viver à sombra de memórias idealizadas e aceitar a realidade fria de que o passado já não pode ser recuperado.' },
+      { title: 'Independência Emocional', desc: 'O processo gradual de retirar ao outro o poder de ditar o teu estado de espírito e a tua felicidade diária.' }
     ],
     keyTakeaways: [
-      'Perder alguém pode ser uma libertação para uma vida autêntica.'
+      'Perder alguém pode ser, paradoxalmente, a maior libertação para conseguires viver uma vida autêntica e fiel aos teus princípios.',
+      'A dor da separação é inevitável, mas o sofrimento prolongado é uma escolha que fazemos quando nos recusamos a virar a página.',
+      'Nenhuma relação deve servir para esconder as tuas próprias inseguranças ou para completares o que já deves trazer inteiro.',
+      'O amor-próprio não é egoísmo, é a fundação inegociável sem a qual qualquer outra relação está condenada ao fracasso.'
     ],
-    personalReview: 'Comovente e realista sobre sarar feridas.',
-    authorBio: 'Autor português de ficção contemporânea.',
+    personalReview: 'Comovente, extremamente humano e muito realista sobre a forma como lidamos com as feridas do coração. Raul Minh\'alma escreve com uma sensibilidade cirúrgica, captando na perfeição o turbilhão de emoções que se segue a uma grande desilusão amorosa. Mais do que uma história de ficção, funciona como um abraço reconfortante e um lembrete empoderador de que nunca devemos perder-nos a nós próprios para tentar manter alguém na nossa vida.',
+    authorBio: 'Um dos autores contemporâneos mais lidos em Portugal, conhecido pela sua escrita cativante focada nas complexidades das relações humanas e do desenvolvimento emocional.',
     quotes: [
-      { text: "Às vezes, perder alguém é a única forma de não nos perdermos a nós próprios.", page: 62 }
+      { text: "Às vezes, perder alguém é a única forma de não nos perdermos a nós próprios.", page: 62 },
+      { text: "O amor nunca deve obrigar-nos a apagar quem somos para caber no mundo de outra pessoa.", page: 114 },
+      { text: "Curar uma ferida amorosa exige tempo, coragem e a firme decisão de não reabrir a porta a quem já escolheu partir.", page: 185 },
+      { text: "Só descobrimos a nossa verdadeira força quando nos vemos obrigados a caminhar sozinhos no meio da tempestade.", page: 220 },
+      { text: "Ganhar uma vida nova significa ter a coragem de olhar para o futuro sem o peso do passado.", page: 251 }
     ],
     frameworks: [
-      { name: "Inventário de Autonomia", desc: "Reconstrução de objetivos individuais." }
+      { name: "Inventário de Autonomia", desc: "Reconstrução sistemática de objetivos individuais, hobbies e projetos de vida que foram negligenciados durante a relação." },
+      { name: "Protocolo de Ausência Zero", desc: "Corte consciente de contactos e vigilância digital para permitir que o sistema emocional processe o luto sem interferências." },
+      { name: "Auditoria de Dependência", desc: "Identificar conscientemente onde depositaste a tua validação emocional no outro para a trazer de volta para o teu próprio eixo." }
     ]
   },
   {
@@ -345,21 +412,32 @@ const INITIAL_BOOKS = [
     format: 'Livro Físico',
     rating: 5,
     cover: 'img/foi sem crer.png', 
-    favoriteChapter: 'Capítulo 12',
-    executiveSummary: 'Narrativa sobre a imprevisibilidade do afeto e a superação de defesas emocionais.',
+    favoriteChapter: 'Capítulo 12 - O Acaso que Muda Tudo',
+    executiveSummary: 'Uma narrativa sensível e envolvente sobre a imprevisibilidade absoluta do afeto e a coragem necessária para derrubar as defesas emocionais que erguemos à nossa volta. Raul Minh\'alma explora como o amor verdadeiro surge frequentemente quando menos o esperamos — sem planos, agendas ou expectativas calculadas. O livro acompanha personagens que, marcadas por desilusões anteriores, tentam proteger-se do sofrimento através do controlo e do distanciamento, apenas para descobrirem que a vida e o sentimento encontram sempre maneira de desarmar as nossas maiores resistências.',
     coreConcepts: [
-      { title: 'Entrega Genuína', desc: 'Coragem de viver sentimentos sem reservas.' }
+      { title: 'A Magia do Acaso', desc: 'A aceitação de que os momentos mais marcantes e genuínos da nossa vida nunca são planeados, acontecendo precisamente quando baixamos a guarda.' },
+      { title: 'Entrega Genuína', desc: 'A coragem de viver os sentimentos sem redes de segurança, aceitando a vulnerabilidade como parte inerente de qualquer conexão profunda.' },
+      { title: 'O Peso das Máscaras', desc: 'Como o medo de sofrer nos leva a vestir couraças de indiferença que acabam por afastar aquilo que mais secretamente desejamos.' },
+      { title: 'Sincronicidade Emocional', desc: 'O alinhamento natural que acontece quando duas pessoas decidem, sem pressões, entregar-se ao momento presente.' }
     ],
     keyTakeaways: [
-      'As melhores histórias surgem sem planeamento.'
+      'As melhores histórias da nossa vida surgem quase sempre sem planeamento e à revelia de todas as nossas regras pré-concebidas.',
+      'Proteger excessivamente o coração por medo de sofrer é a forma mais garantida de nos privarmos de viver experiências genuínas.',
+      'O amor não se força nem se programa; ele acontece de forma orgânica quando duas pessoas se permitem ser inteiramente transparentes.',
+      'A vulnerabilidade não é sinal de fraqueza, mas sim a chave indispensável para abrir a porta a um afeto verdadeiro.'
     ],
-    personalReview: 'Romance leve e inspirador.',
-    authorBio: 'Autor bestseller português.',
+    personalReview: 'Um romance leve, inspirador e com uma mensagem muito bonita sobre a espontaneidade dos sentimentos. Raul Minh\'alma tem o dom de escrever de forma muito próxima do leitor, tocando em inseguranças comuns sobre o medo de amar e de baixar as defesas. É uma leitura que nos deixa com o coração cheio e nos lembra que, por mais feridos que estejamos, a vida tem sempre uma surpresa guardada para quando menos esperamos.',
+    authorBio: 'Autor bestseller português, reconhecido pela escrita sensível e emocionante que conquista leitores de todas as idades com reflexões profundas sobre o amor e a vida.',
     quotes: [
-      { text: "O amor acontece quando deixamos o coração aberto.", page: 77 }
+      { text: "O amor acontece quando deixamos o coração aberto, sem medos nem planos traçados.", page: 77 },
+      { text: "As pessoas que mais nos marcam são aquelas que entram na nossa vida sem bater à porta.", page: 132 },
+      { text: "Tentamos controlar tudo na vida, mas esquecemos-nos de que os sentimentos não obedecem a regras lógicas.", page: 45 },
+      { text: "Quem tem muito medo de sofrer acaba por nunca se permitir viver a felicidade por inteiro.", page: 198 },
+      { text: "Foi sem querer que te quis, mas foi com toda a certeza do mundo que decidi ficar.", page: 240 }
     ],
     frameworks: [
-      { name: "Desarmamento Afetivo", desc: "Eliminar barreiras defensivas." }
+      { name: "Desarmamento Afetivo", desc: "Técnica consciente de eliminar barreiras defensivas e cinismo perante novas pessoas, permitindo a aproximação sem julgamentos prévios." },
+      { name: "Gestão da Espontaneidade", desc: "Aprender a desligar o excesso de planeamento mental e de controlo nas relações, aceitando o fluxo natural dos acontecimentos." }
     ]
   },
   {
@@ -372,21 +450,32 @@ const INITIAL_BOOKS = [
     format: 'Livro Físico',
     rating: 5,
     cover: 'img/durante a queda.png', 
-    favoriteChapter: 'Capítulo 21',
-    executiveSummary: 'Obra sobre resiliência profunda e renascimento perante crises e quedas.',
+    favoriteChapter: 'Capítulo 21 - O Ponto de Viragem',
+    executiveSummary: 'Uma obra intensa e profundamente inspiradora sobre resiliência perante as maiores crises da vida. Raul Minh\'alma aborda o momento inevitável em que o nosso mundo desaba — seja por uma perda, uma traição ou o colapso de um sonho — e mostra que é exatamente no fundo do poço, durante a própria queda, que descobrimos recursos internos que desconhecíamos possuir. O livro é um hino à capacidade humana de renascer das cinzas, transformar o sofrimento em sabedoria e usar o impacto do fundo para criar o impulso necessário para voar mais alto.',
     coreConcepts: [
-      { title: 'Resiliência Ativa', desc: 'Usar o impacto da queda como impulso.' }
+      { title: 'Resiliência Ativa', desc: 'A capacidade de não se limitar a aguentar o golpe, mas de usar a própria energia da queda como propulsão para uma transformação positiva.' },
+      { title: 'O Dom do Fundo do Poço', desc: 'Compreender que atingir o limite da dor elimina todas as ilusões e nos obriga a reconstruir a nossa vida com bases sólidas e verdadeiras.' },
+      { title: 'A Ilusão do Controle', desc: 'Aceitar que há acontecimentos na vida que escapam totalmente ao nosso domínio e que a verdadeira liberdade reside na forma como escolhemos reagir.' },
+      { title: 'Renascimento Pessoal', desc: 'O processo de transmutação onde a pessoa que sobrevive à crise já não é a mesma que entrou nela, saindo infinitamente mais forte e consciente.' }
     ],
     keyTakeaways: [
-      'As quedas não definem quem és; o que importa é como te reergues.'
+      'As quedas e os abanões violentos da vida não definem quem és de forma permanente; o que realmente importa é a coragem com que te reergues.',
+      'É nos momentos de maior vulnerabilidade e desespero que descobres a verdadeira extensão da tua força interior.',
+      'Nenhuma crise é eterna, por mais escura que pareça a noite; a luz recomeça sempre para quem se recusa a desistir.',
+      'Sofrer faz parte do processo de crescimento, desde que escolhas aprender com a dor em vez de te deixares consumir por ela.'
     ],
-    personalReview: 'Profundamente empoderador.',
-    authorBio: 'Romancista português aclamado.',
+    personalReview: 'Profundamente empoderador e com uma carga emocional gigante. Raul Minh\'alma consegue transformar temas difíceis como a dor, a perda e a desilusão numa mensagem de esperança pura e de superação. É um livro que nos faz olhar para os nossos próprios problemas com outra perspetiva, mostrando que mesmo quando tudo parece perdido, temos dentro de nós asas prontas para desdobrar. Uma leitura obrigatória para quem está a atravessar uma fase turbulenta.',
+    authorBio: 'Romancista português aclamado pelo público, conhecido pelas suas histórias marcantes que unem o romance à superação e ao crescimento pessoal.',
     quotes: [
-      { text: "É lá no fundo que descobres que tens asas para voar.", page: 53 }
+      { text: "É lá no fundo, quando já não nos resta mais nada a perder, que descobrimos que temos asas para voar.", page: 53 },
+      { text: "As cicatrizes não são o sinal de uma fraqueza que ficou, mas sim a prova viva de uma batalha que venceste.", page: 129 },
+      { text: "Não podes evitar que a vida te derrube, mas podes decidir o tempo que decides ficar no chão.", page: 191 },
+      { text: "A coragem não é a ausência de medo, mas a decisão consciente de avançar apesar de saberes que podes cair.", page: 215 },
+      { text: "Foram precisas as maiores tempestades para eu perceber a força imensa que sempre tive guardada cá dentro.", page: 270 }
     ],
     frameworks: [
-      { name: "Mapeamento de Superação", desc: "Análise de forças mobilizadas na crise." }
+      { name: "Mapeamento de Superação", desc: "Análise sistemática das forças e recursos mobilizados durante uma crise para criar um plano de reestruturação pessoal." },
+      { name: "Auditoria de Danos e Oportunidades", desc: "Separar o que foi destruído pelo impacto da queda daquilo que foi limpo, abrindo espaço para construir bases mais autênticas." }
     ]
   },
   {
@@ -399,21 +488,32 @@ const INITIAL_BOOKS = [
     format: 'Livro Físico',
     rating: 5,
     cover: 'img/se me amas.png', 
-    favoriteChapter: 'Capítulo 18',
-    executiveSummary: 'Reflexão sobre a urgência inegociável de valorizar quem amamos no presente.',
+    favoriteChapter: 'Capítulo 18 - O Tempo Não Espera por Ninguém',
+    executiveSummary: 'Uma reflexão intensa e urgente sobre a inegociável necessidade de valorizar quem amamos no presente, sem adiar afetos, desculpas ou demonstrações de carinho. Raul Minh\'alma aborda o perigo silencioso do orgulho, da hesitação e da mania de achar que o tempo é infinito. Através de uma narrativa sensível, o livro alerta para o facto de as oportunidades de amar e ser feliz com alguém terem um prazo de validade invisível, mostrando que o amor verdadeiro exige presença imediata, clareza e a coragem de não deixar para amanhã o que o coração grita para fazer hoje.',
     coreConcepts: [
-      { title: 'Urgência do Afeto', desc: 'Não adiar a demonstração de carinho.' }
+      { title: 'A Urgência do Afeto', desc: 'A consciência de que o tempo é o recurso mais escasso e que adiar demonstrações de carinho é o caminho mais rápido para o arrependimento.' },
+      { title: 'O Perigo do Orgulho', desc: 'Como o medo de baixar a guarda e os joguinhos de poder destroem relações que, no fundo, se baseiam num amor genuíno.' },
+      { title: 'O Presente como Único Palco', desc: 'A premissa de que o passado já passou e o futuro é incerto; o único momento onde o amor pode ser vivido e provado é agora.' },
+      { title: 'Clareza de Intenções', desc: 'A importância de parar com ambiguidades e assumir sem medo aquilo que sentimos por quem nos importa.' }
     ],
     keyTakeaways: [
-      'O tempo dedicado a alguém é o bem mais precioso.'
+      'Quem ama verdadeiramente não adia, não hesita por orgulho e não deixa para amanhã o carinho que pode dar hoje.',
+      'O tempo dedicado a alguém é o bem mais precioso que podes oferecer; nunca o desperdices com trivialidades.',
+      'O orgulho é o cemitério dos melhores amores; muitas relações acabam não por falta de sentimento, mas por excesso de silêncio.',
+      'A vida muda num segundo e as pessoas não ficam à espera para sempre que decidas dar valor à presença delas.'
     ],
-    personalReview: 'Uma chamada de atenção atual sobre viver o amor.',
-    authorBio: 'Autor português de desenvolvimento emocional.',
+    personalReview: 'Uma chamada de atenção muito atual e profunda sobre a forma como gerimos o nosso tempo e as nossas relações. Raul Minh\'alma toca numa ferida sensível: o hábito humano de tomar as pessoas que amamos como garantidas. É um livro que mexe com a consciência, deixando uma mensagem clara de que o amor requer ação imediata e ausência de orgulho. Emocionante do princípio ao fim.',
+    authorBio: 'Autor português de referência na área do romance e do desenvolvimento emocional, amplamente querido pelos leitores pela intensidade e verdade das suas palavras.',
     quotes: [
-      { text: "Quem ama não adia e não deixa para amanhã o carinho que pode dar hoje.", page: 89 }
+      { text: "Quem ama não adia e não deixa para amanhã o carinho que pode dar hoje.", page: 89 },
+      { text: "O orgulho é um péssimo conselheiro que nos rouba os abraços que mais tarde vamos passar a vida a chorar.", page: 142 },
+      { text: "As pessoas não são eternas e os sentimentos, se forem ignorados por muito tempo, acabam por se fartar de esperar.", page: 38 },
+      { text: "Achas sempre que tens todo o tempo do mundo, até que o relógio da vida te mostra o contrário.", page: 201 },
+      { text: "Se me amas, não te demores. O amor quer-se agora, na urgência bonita de quem sabe que o presente é tudo o que temos.", page: 255 }
     ],
     frameworks: [
-      { name: "Protocolo de Presença", desc: "Estar 100% focado no interlocutor." }
+      { name: "Protocolo de Presença", desc: "Técnica de atenção plena para estar 100% focado no interlocutor, eliminando distrações e priorizando quem está ao teu lado." },
+      { name: "Auditoria de Orgulho", desc: "Avaliar situações de atrito ou silêncio para identificar se o afastamento se deve a motivos reais ou apenas a birras de ego." }
     ]
   }
 ];
